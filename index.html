@@ -7,62 +7,69 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- GATE SCREEN -->
-<div id="gate-screen">
-  <div class="gate-content">
-    <img src="door.jpg" alt="Enter Gate" width="100" />
-    <button id="enter-button">Enter</button>
+
+  <!-- GATE SCREEN -->
+  <div id="gate-screen">
+    <div class="gate-content">
+      <img src="door.jpg" alt="Enter Gate" width="100" />
+      <button id="enter-button">Enter</button>
+    </div>
   </div>
-</div>
 
-  <!-- Navigation Menu -->
-  <nav>
-    <ul>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#shop">Store</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- MAIN SITE CONTENT -->
+  <div id="main-content" style="display: none;">
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#shop">Store</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Hero Section -->
-  <header>
-    <h1>Welcome to Eri's World</h1>
-    <p>Digital collages, paintings, and other realities</p>
-  </header>
+    <!-- Hero Section -->
+    <header>
+      <h1>welcome</h1>
+      <p>creations, and other realities</p>
+    </header>
 
-  <!-- Placeholder for other sections -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>[Your art will go here]</p>
-  </section>
+    <!-- Placeholder for other sections -->
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>[art will go here]</p>
+    </section>
 
-  <section id="shop">
-    <h2>Shop</h2>
-    <p>[Shopify embed will go here]</p>
-  </section>
+    <section id="shop">
+      <h2>Shop</h2>
+      <p>[Shopify embed will go here]</p>
+    </section>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>[Substack embed or link]</p>
-  </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>[Substack embed or link]</p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: hello@idonotexist.org</p>
+    </section>
+  </div>
 
+  <!-- Script to handle gate screen transition -->
   <script>
-  const gate = document.getElementById("gate-screen");
-  const button = document.getElementById("enter-button");
+    const gate = document.getElementById("gate-screen");
+    const button = document.getElementById("enter-button");
+    const main = document.getElementById("main-content");
 
-  button.addEventListener("click", () => {
-    gate.style.opacity = 0;
-    setTimeout(() => {
-      gate.style.display = "none";
-    }, 800);
-  });
-</script>
+    button.addEventListener("click", () => {
+      gate.style.opacity = 0;
+      setTimeout(() => {
+        gate.style.display = "none";
+        main.style.display = "block";
+      }, 800);
+    });
+  </script>
 
 </body>
 </html>
