@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- GATE SCREEN -->
+<div id="gate-screen">
+  <div class="gate-content">
+    <img src="door.jpg" alt="Enter Gate" width="100" />
+    <button id="enter-button">Enter</button>
+  </div>
+</div>
 
   <!-- Navigation Menu -->
   <nav>
@@ -44,6 +51,18 @@
     <h2>Contact</h2>
     <p>Email: your@email.com</p>
   </section>
+
+  <script>
+  const gate = document.getElementById("gate-screen");
+  const button = document.getElementById("enter-button");
+
+  button.addEventListener("click", () => {
+    gate.style.opacity = 0;
+    setTimeout(() => {
+      gate.style.display = "none";
+    }, 800);
+  });
+</script>
 
 </body>
 </html>
